@@ -1,4 +1,4 @@
-
+                                            //weather app with web server
     const express=require('express')
     const hbs=require('hbs')
     const path=require('path')
@@ -35,9 +35,6 @@
             title:'Help Error',name:'ansh',errorMessage:'Error 404 page not found'
         })
     })
-
-    
-    
     app.get('/products',(req,res)=>{
         if(!req.query.search)
         {
