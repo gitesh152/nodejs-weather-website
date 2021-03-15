@@ -1,0 +1,19 @@
+<html>
+    <head>
+         <title>HELP</title>
+         <link rel="icon" href="./img/weather.png">
+        <link rel="stylesheet" href="./css/styles.css"> 
+         {{!-- Again reminding css,js asset are served from ./public folder   --}}
+        <script src="./javascript/scipts.js"></script>   
+        <!--//linking css,js with relative route,absolute route may expose hard disk etc-->
+    </head>
+    <body>
+        <div class="main-content">
+        {{>header}}
+        {{!-- //we can include our partial in views with synatx {{>partial}} or {{>header}} --}}
+        <h1><i>Help...</i></h1>
+        <p>{{helpText}}</p>
+        </div>
+        {{>footer}}
+    </body>
+</html> 

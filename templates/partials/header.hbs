@@ -1,0 +1,13 @@
+{{!-- <h1>Static header.hbs Text and Title : {{title}}</h1> --}}
+{{!-- now we render it in index or any page as header as any view . Lets do it in help page  --}}
+{{! we dont need to provide any path etc }}
+{{!-- //we can include our partial in views with synatx {{>partial}} or {{>header}} --}}
+ {{! we can also use prop of views in partial,
+so that partial cud be included with prop inside of it or we dont have to call that prop in view }}
+
+<h1>{{title}}</h1>
+<header>
+    <a href='/'>Weather</a>
+    <a href='/about'>About</a>
+    <a href='/help'>Help</a> 
+</header>
