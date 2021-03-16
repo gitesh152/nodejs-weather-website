@@ -1,4 +1,4 @@
-console.log('Client side javascript file is loaded...') 
+//console.log('Client side javascript file is loaded...') 
 //we can see it in only developer options
 
 //now here we will fetch data from given url and drop it to clinet side js 
@@ -6,26 +6,26 @@ console.log('Client side javascript file is loaded...')
 //below we are saying fetch data from url then run the fn
 //fetch will execute asynch operation to fetch data at some time.then
 //call the callback inside then
-fetch('http://puzzle.mead.io/puzzle').then((response)=>{     
-    //below we are saying get response in json then run the fn
-    response.json().then((data)=>{
-        console.log(data)   //this also can ce seen in dev tools
-    })
-})    
-//now use our forecast info from below url
-fetch('http://localhost:3000/weather?address=kanpur').then((response)=>{
-    response.json().then((data)=>{
-        if(data.error)
-        {
-            console.log(data.error)
-        }
-        else
-        {   
-            console.log(data.forecast)
-            console.log(data.location)
-        }
-    })
-})
+// fetch('http://puzzle.mead.io/puzzle').then((response)=>{     
+//     //below we are saying get response in json then run the fn
+//     response.json().then((data)=>{
+//         console.log(data)   //this also can ce seen in dev tools
+//     })
+// })    
+// //now use our forecast info from below url
+// fetch('http://localhost:3000/weather?address=kanpur').then((response)=>{
+//     response.json().then((data)=>{
+//         if(data.error)
+//         {
+//             console.log(data.error)
+//         }
+//         else
+//         {   
+//             console.log(data.forecast)
+//             console.log(data.location)
+//         }
+//     })
+// })
 //now we have data in console ,we will render it in real browser window page
 //Now we will  create our form in index page
 //done , now here
@@ -50,7 +50,8 @@ messageOne.textContent='Loading ... '
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location=search.value
-    fetch('http://localhost:3000/weather?address='+location+'').then((response)=>{
+    //fetch('http://localhost:3000/weather?address='+location+'').then((response)=>{  //for localhost
+    fetch('/weather?address='+location+'').then((response)=>{    //for heroku   
     response.json().then((data)=>{
         if(data.error)
         {
