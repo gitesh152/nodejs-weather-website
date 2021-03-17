@@ -15,7 +15,7 @@ const forecast=(lat,long,callback)=>{
             else
             {
                 const current=body.current
-                const data=current.weather_descriptions[0]+". It is currently "+current.temperature+" out here. And its feel like "+current.feelslike+" here."
+                const data=current.weather_descriptions[0]+". It is currently "+current.temperature+" out here. And its feel like "+current.feelslike+" here. Humidity is "+current.humidity
                     callback(undefined,data)                     }
     })
 }
