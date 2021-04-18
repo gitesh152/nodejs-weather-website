@@ -46,7 +46,7 @@
             // geocode(req.query.address,(error,{latitude,longitude,location})=>
             // ....
             // ...       
-    //now if we give incrrect address in url
+    //now if we give incorrect address in url
     //localost:3000/weather?address=121ddfd
     //callback inside geocode is called,in which we pass value for error,but we dont pass success data since it was not success
     //=>Cannot destructure property 'latitude' of 'undefined'  (as it is undefined,app crashes)
@@ -68,4 +68,4 @@ geocode(req.query.address,(error,{latitude,longitude,location}={})=>{ //here pro
         })   
     })
 
-}
+})

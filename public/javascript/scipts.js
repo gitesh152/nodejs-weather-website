@@ -1,10 +1,10 @@
 //console.log('Client side javascript file is loaded...') 
 //we can see it in only developer options
 
-//now here we will fetch data from given url and drop it to clinet side js 
+//now here we will fetch data from given url and drop it to client side js 
 
 //below we are saying fetch data from url then run the fn
-//fetch will execute asynch operation to fetch data at some time.then
+//fetch will execute asynch operation to fetch data at some time then
 //call the callback inside then
 // fetch('http://puzzle.mead.io/puzzle').then((response)=>{     
 //     //below we are saying get response in json then run the fn
@@ -51,7 +51,7 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location=search.value
     //fetch('http://localhost:3000/weather?address='+location+'').then((response)=>{  //for localhost
-    fetch('/weather?address='+location+'').then((response)=>{    //for heroku   
+    fetch('/weather?address='+location+'').then((response)=>{    //for localhost and heroku both    
     response.json().then((data)=>{
         if(data.error)
         {
